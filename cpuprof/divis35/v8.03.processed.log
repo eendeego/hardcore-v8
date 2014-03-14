@@ -1,0 +1,37 @@
+Statistical profiling result from cpuprof/divis35/v8.03.log, (1595 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+      2    0.1%    0.0%  /usr/lib/system/libsystem_c.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+   1424   89.3%   89.4%  LazyCompile: *multiplesOf3and5 cpuprof/divis35/v03.js:3
+    133    8.3%    8.3%  Stub: BinaryOpStub_ADD_Alloc_HeapNumber+SMI
+      1    0.1%    0.1%  LazyCompile: ADD native runtime.js:163
+
+ [C++]:
+   ticks  total  nonlib   name
+     25    1.6%    1.6%  start
+      7    0.4%    0.4%  _bcopy
+      1    0.1%    0.1%  _makecontext
+      1    0.1%    0.1%  _mach_port_allocate
+      1    0.1%    0.1%  ___fork
+
+ [GC]:
+   ticks  total  nonlib   name
+     19    1.2%
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 2.0% are not shown.
+
+   ticks parent  name
+   1424   89.3%  LazyCompile: *multiplesOf3and5 cpuprof/divis35/v03.js:3
+   1424  100.0%    Script: ~cpuprof/divis35/v03.js
+
+    133    8.3%  Stub: BinaryOpStub_ADD_Alloc_HeapNumber+SMI
+    133  100.0%    LazyCompile: *multiplesOf3and5 cpuprof/divis35/v03.js:3
+    133  100.0%      Script: ~cpuprof/divis35/v03.js
+

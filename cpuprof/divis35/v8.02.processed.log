@@ -1,0 +1,47 @@
+Statistical profiling result from cpuprof/divis35/v8.02.log, (3069 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     19    0.6%    0.0%  /usr/lib/system/libsystem_c.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+   1441   47.0%   47.2%  LazyCompile: *multiplesOf3and5 cpuprof/divis35/v02.js:1
+      1    0.0%    0.0%  LazyCompile: ~multiplesOf3and5 cpuprof/divis35/v02.js:1
+
+ [C++]:
+   ticks  total  nonlib   name
+    779   25.4%   25.5%  _bcopy
+    716   23.3%   23.5%  start
+    102    3.3%    3.3%  _mach_port_allocate
+      4    0.1%    0.1%  _open_dprotected_np
+      2    0.1%    0.1%  mcount
+      1    0.0%    0.0%  _vfprintf_l
+      1    0.0%    0.0%  _malloc_zone_enumerate_discharged_pointers
+      1    0.0%    0.0%  _malloc_jumpstart
+      1    0.0%    0.0%  _makecontext
+      1    0.0%    0.0%  _create_scalable_zone
+
+ [GC]:
+   ticks  total  nonlib   name
+    346   11.3%
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 2.0% are not shown.
+
+   ticks parent  name
+   1441   47.0%  LazyCompile: *multiplesOf3and5 cpuprof/divis35/v02.js:1
+   1441  100.0%    Script: ~cpuprof/divis35/v02.js
+
+    779   25.4%  _bcopy
+    778   99.9%    LazyCompile: *multiplesOf3and5 cpuprof/divis35/v02.js:1
+    778  100.0%      Script: ~cpuprof/divis35/v02.js
+
+    716   23.3%  start
+    474   66.2%    LazyCompile: *multiplesOf3and5 cpuprof/divis35/v02.js:1
+    474  100.0%      Script: ~cpuprof/divis35/v02.js
+
+    102    3.3%  _mach_port_allocate
+
